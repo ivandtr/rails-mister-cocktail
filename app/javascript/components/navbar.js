@@ -1,14 +1,16 @@
 const initUpdateNavbarOnScroll = () => {
   const navbar = document.querySelector('.navbar-lewagon');
+  const snapcontainer = document.querySelector('.scrollsnap');
   if (navbar) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY >= window.innerHeight) {
-        navbar.classList.add('navbar-lewagon-white');
+    snapcontainer.addEventListener('scroll', () => {
+      if (snapcontainer.scrollTop >= window.innerHeight) {
+        navbar.classList.add('navbar-lewagon-visible');
       } else {
-        navbar.classList.remove('navbar-lewagon-white');
+        navbar.classList.remove('navbar-lewagon-visible');
       }
     });
   }
 }
 
 export { initUpdateNavbarOnScroll };
+// event.currentTarget.scrollTop

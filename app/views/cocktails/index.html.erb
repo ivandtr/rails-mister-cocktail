@@ -1,24 +1,21 @@
-<div class="home-banner">
-  <h1>Mr. Cocktail</h1>
-</div>
-
-<div class="container">
-  <div class="row justify-content-center">
+<div class="scrollsnap">
+  <div class="home-banner snapchild">
+    <h1>Mr. Cocktail</h1>
+    <p>Add, share and discover amazing cocktails</p>
+    <%= link_to "Add a cocktail", new_cocktail_path, class: "button button-flat" %>
+    <p>Gallery</p>
+    <%= link_to ('<i class="fad fa-chevron-down"></i>').html_safe, "#gallery", class: "arrow" %>
 
   </div>
+
+  <div id="gallery" class="container cards snapchild">
+    <% @cocktails.each do |cocktail| %>
+
+      <div class="card-category p-3 m-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/500x400/?cocktail)">
+        <%= link_to cocktail.name, cocktail_path(cocktail) %>
+      </div>
+    <% end %>
+
+  </div>
+
 </div>
-
-<div class="container cards">
-  <% @cocktails.each do |cocktail| %>
-
-    <div class="card-category p-3 m-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/500x400/?cocktail)">
-      <%= link_to cocktail.name, cocktail_path(cocktail) %>
-    </div>
-  <% end %>
-
-</div>
-
-
-
-
-<li><%= link_to 'Add a new cocktail', new_cocktail_path %></li>

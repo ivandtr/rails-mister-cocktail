@@ -4,3 +4,12 @@
 @import "navbar";
 @import "banner";
 @import "card";
+@import "buttons";
+
+// .hidden {
+//   display: none;
+// }
+
+html *{
+  scroll-behavior: smooth !important;
+}

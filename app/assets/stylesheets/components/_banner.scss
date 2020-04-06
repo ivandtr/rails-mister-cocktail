@@ -1,8 +1,50 @@
 .home-banner {
-  background-image: url('https://source.unsplash.com/1000x800/?cocktail');
+  background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%), url('homepage.jpg');
   background-size: cover;
+  background-position: center;
   height: 100vh;
-  color: #eee;
+  color: white;
   text-align: center;
   padding-top: 40vh;
+
+}
+
+
+.home-banner h1 {
+  font-family: 'Rock Salt', cursive;
+  // font-family: 'Stalemate', cursive;
+  margin-bottom: 8px;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.home-banner p {
+  margin-bottom: 36px;
+  font-size: 20px;
+  color: white;
+  opacity: .8;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  // background: white
+}
+
+
+ // https://source.unsplash.com/1000x800/?cocktail
+
+.scrollsnap {
+  overflow: auto;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+}
+
+.snapchild {
+  scroll-snap-align: start;
+}
+
+.home-banner .arrow{
+  font-size: 48px;
+  color: white;
+  text-decoration: none;
+  margin-top: 48px;
 }
