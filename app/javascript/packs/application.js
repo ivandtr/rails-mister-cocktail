@@ -18,8 +18,11 @@
 import 'bootstrap';
 
 import { initUpdateNavbarOnScroll } from '../components/navbar';
+import { initAnime } from '../plugins/init_anime';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   initUpdateNavbarOnScroll();
+  initAnime();
 });
+

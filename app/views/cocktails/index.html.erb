@@ -1,10 +1,11 @@
 <div class="scrollsnap">
   <div class="home-banner snapchild">
+    <%= render 'shared/logo' %>
     <h1>Mr. Cocktail</h1>
     <p>Add, share and discover amazing cocktails</p>
     <%= link_to "Add a cocktail", new_cocktail_path, class: "button button-flat" %>
     <p>Gallery</p>
-    <%= link_to ('<i class="fad fa-chevron-down"></i>').html_safe, "#gallery", class: "arrow" %>
+    <%= link_to ('<i class="fas fa-chevron-down"></i>').html_safe, "#gallery", class: "arrow" %>
 
   </div>
 
