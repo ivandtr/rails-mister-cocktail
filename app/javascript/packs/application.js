@@ -15,14 +15,21 @@
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
+// IMPORTS
 import 'bootstrap';
-
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { initAnime } from '../plugins/init_anime';
+import { initSelect2 } from '../plugins/init_select2';
 
+// initialize plugins
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   initUpdateNavbarOnScroll();
-  initAnime();
 });
 
+initAnime();
+initSelect2();
+
+//AJAX calls
+
+// listeners

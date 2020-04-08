@@ -1,4 +1,4 @@
-<h1>Cocktails#show</h1>
+<h1>Cocktail#show</h1>
 <p>Find me in app/views/cocktails/show.html.erb</p>
 
 <%= @cocktail.name %>
@@ -11,14 +11,17 @@
         data: {confirm: "Are you sure?"} %>
   </li>
 <% end %>
-  <li><%= link_to 'Add a new dose', new_cocktail_dose_path(@cocktail) %></li>
 </ul>
-
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :description %>
+  <%= f.association :ingredient, class: "select2" %>
+  <%= f.submit "Add ingredient", class: "btn btn-primary" %>
+<% end %>
+<select class="select2" name="country">
+  <option value="AL">Alabama</option>
+  <option value="AL">Alabty</option>
+  <option value="WY">Wyoming</option>
+</select>
 
 <h1>Add a new ingredient</h1>
 
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :description %>
-  <%= f.association :ingredient %>
-  <%= f.submit "Add ingredient", class: "btn btn-primary" %>
-<% end %>
